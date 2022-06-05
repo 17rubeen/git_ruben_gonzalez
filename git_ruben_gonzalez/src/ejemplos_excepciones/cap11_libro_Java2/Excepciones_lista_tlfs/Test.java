@@ -1,5 +1,4 @@
 package ejemplos_excepciones.cap11_libro_Java2.Excepciones_lista_tlfs;
-import cap10.Banco.*;
 import java.io.*;
 
 /////////////////////////////////////////////////////////////////
@@ -79,11 +78,11 @@ public class Test
          case 3: // añadir
             flujoS.print("nombre:    "); nombre = flujoE.readLine();
             flujoS.print("dirección: "); dirección = flujoE.readLine();
-            flujoS.print("teléfono:  "); teléfono = Leer.datoLong();
+            flujoS.print("teléfono:  "); teléfono = Leer.datoInt();
             listatfnos.añadir(new CPersona(nombre, dirección, teléfono));
             break;
           case 4: // eliminar
-            flujoS.print("teléfono: "); teléfono = Leer.datoLong();
+            flujoS.print("teléfono: "); teléfono = Leer.datoInt();
             eliminado = listatfnos.eliminar(teléfono);
             if (eliminado)
               flujoS.println("registro eliminado");
